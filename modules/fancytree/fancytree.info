@@ -3,7 +3,7 @@ description = A Tricked Out Library Loader for <a href="https://github.com/mar10
 core = 7.x
 php = 5.2.4
 version = 7.x-1.
-package= jQuery Fancytree
+package= Shanti
 dependencies[] = libraries (>=2.1)
 dependencies[] = jquery_update
 dependencies[] = json2
