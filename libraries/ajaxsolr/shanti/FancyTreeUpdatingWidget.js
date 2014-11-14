@@ -148,11 +148,14 @@ AjaxSolr.FancyTreeUpdatingWidget = AjaxSolr.AbstractWidget.extend(
                   );
 
                   maskTree(true);
-                  var tree = $('#tree').fancytree('getTree').applyFilter(function (node) {
+                  var tree = $('#tree').fancytree('getTree');
+		  tree.options.filter.hide = true;
+		  tree.options.filter.leavesOnly = false;
+		  tree.filterNodes(function (node) {
                       // console.log(node.key);
                       // console.log(node.key +":" + resultHash[node.key]);
                       return (typeof resultHash[node.key] !== 'undefined');
-                  });
+                  },false);
 //                  console.log("done traversing");
                   maskTree(false);
                   // we are masking everything and unmasking here (for the time being).
@@ -162,7 +165,7 @@ AjaxSolr.FancyTreeUpdatingWidget = AjaxSolr.AbstractWidget.extend(
                   $('span.fancytree-title').highlight(txt, { element: 'mark' });
 
 
-              });
+              },false);
           } else {
               // Let's not do the search, since there is no query.
               maskSearchResults(false)

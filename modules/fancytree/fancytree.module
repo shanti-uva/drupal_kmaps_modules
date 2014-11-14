@@ -13,8 +13,8 @@ function fancytree_libraries_info(){
       'download url' => 'https://github.com/mar10/fancytree/releases/download/v2.0.0-2/jquery.fancytree-2.0.0-2.zip',
       'version arguments' => array(
           'file' => 'jquery.fancytree.min.js',
-          'pattern' => '@(?i:jQuery Fancytree Plugin) - v([0-9\.\-a-z]+)@',
-          'lines' => 2
+          'pattern' => '@(?i:version) ([0-9\.\-a-z]+)@',
+          'lines' => 12
       ),
       'files' => array(
           'js' => array('jquery.fancytree.min.js'),
@@ -54,7 +54,7 @@ function fancytree_libraries_info(){
       'integration files' => array(
           'fancytree' => array(
               'js' => array('fancytree.js'),
-              'css' => array('fanctytree.css'),
+              'css' => array('fancytree.css'),
           ),
       ),
   );

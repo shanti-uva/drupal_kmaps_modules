@@ -72,7 +72,7 @@ function ajaxsolr_libraries_info()
 //        'integration files' => array(
 //            'fancytree' => array(
 //                'js' => array('fancytree.js'),
-//                'css' => array('fanctytree.css'),
+//                'css' => array('fancytree.css'),
 //            ),
 //        ),
     );
