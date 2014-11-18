@@ -9,8 +9,8 @@
  * Released under the MIT license
  * https://github.com/mar10/fancytree/wiki/LicenseInfo
  *
- * @version @VERSION
- * @date @DATE
+ * @version 2.4.1
+ * @date 2014-09-23T19:33
  */
 
 ;(function($, window, document, undefined) {
@@ -69,7 +69,6 @@ $.ui.fancytree._FancytreeClass.prototype._applyFilterImpl = function(filter, bra
 				});
 				return "skip";
 			}
-			node.makeVisible();
 		}
 	});
 	// Redraw

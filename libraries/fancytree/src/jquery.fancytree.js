@@ -1415,8 +1415,8 @@ FancytreeNode.prototype = /** @lends FancytreeNode# */{
 			topNode = opts.topNode || null,
 			newScrollTop = null;
 
-			this.debug("scrollIntoView(), scrollTop=", scrollTop, opts.scrollOfs);
-		// _assert($(this.span).is(":visible"), "scrollIntoView node is invisible"); // otherwise we cannot calc offsets
+		// this.debug("scrollIntoView(), scrollTop=", scrollTop, opts.scrollOfs);
+		_assert($(this.span).is(":visible"), "scrollIntoView node is invisible"); // otherwise we cannot calc offsets
 
 		if( isParentWindow ) {
 			nodeY = $(this.span).offset().top;
