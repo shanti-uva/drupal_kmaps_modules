@@ -69,6 +69,7 @@ $.ui.fancytree._FancytreeClass.prototype._applyFilterImpl = function(filter, bra
 				});
 				return "skip";
 			}
+			node.makeVisible();
 		}
 	});
 	// Redraw
