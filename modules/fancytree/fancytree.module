@@ -101,7 +101,7 @@ function fancytree_element_info(){
       'generateIds' => TRUE, // Generate id attributes like <span id='fancytree-id-KEY'>
       'idPrefix' => "fancytree-id", // Used to generate node id´s like <span id='fancytree-id-<key>'>.
       'selectMode' => 3, // 1:single, 2:multi, 3:multi-hier
-      'extensions' => array('filter'),
+      'extensions' => array('filter','glyph'),
       'filter' => array(
         'mode' => 'hide',
         ),

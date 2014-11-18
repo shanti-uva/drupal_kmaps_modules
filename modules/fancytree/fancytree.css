@@ -16,3 +16,8 @@ span.fancytree-childcounter {
   text-align: center;
   font-size: 9px;
 }
+
+.fancytree-ext-filter-hide tr.fancytree-hide,
+.fancytree-ext-filter-hide span.fancytree-node.fancytree-hide {
+    display: none;
+}

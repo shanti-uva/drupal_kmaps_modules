@@ -148,7 +148,7 @@ AjaxSolr.FancyTreeUpdatingWidget = AjaxSolr.AbstractWidget.extend(
                   );
 
                   maskTree(true);
-                  var tree = $('#tree').fancytree('getTree').applyFilter(function (node) {
+                  var tree = $('#tree').fancytree('getTree').filterNodes(function (node) {
                       // console.log(node.key);
                       // console.log(node.key +":" + resultHash[node.key]);
                       return (typeof resultHash[node.key] !== 'undefined');
