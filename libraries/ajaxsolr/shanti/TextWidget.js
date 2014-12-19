@@ -15,6 +15,7 @@ const SEARCH_MIN_LENGTH = 2;
                 widget = this;
             }
             var value = $(widget.target).val();
+            console.log("search value = " + value);
 
             if (value.length < SEARCH_MIN_LENGTH) {
                 if (widget.notify) {
@@ -31,11 +32,12 @@ const SEARCH_MIN_LENGTH = 2;
                     // Process advanced search
 
                     console.log("SEARCH GROUP:" + $('#searchAnchorGroup'));
-                    console.log("SEARCH ANCHOR: " + $('#searchAnchorGroup input[checked]').val());
-                    console.log("SEARCH SCOPE: " + $('#searchScopeGroup input[checked]').val());
+                    console.log("SEARCH ANCHOR: " + $('#searchAnchorGroup .checked input[name="anchor"]').val());
+                    console.log("SEARCH SCOPE: " + $('#searchScopeGroup .checked input[name="scope"]').val());
 
-                    var anchor = $('#searchAnchorGroup input[checked]').val();
-                    var scope = $('#searchScopeGroup input[checked]').val();
+
+                    var anchor = $('#searchAnchorGroup .checked input[name="anchor"]').val();
+                    var scope = $('#searchScopeGroup .checked input[name="scope"]').val();
 
                     switch (anchor) {
                         case 'startsWith':
@@ -66,7 +68,7 @@ const SEARCH_MIN_LENGTH = 2;
                 }
 
                 // alert("search " + value);
-//                        console.log("TEXTWIDGET: search " + value);
+                        console.log("TEXTWIDGET: search " + value);
 
 
                 widget.set(value);
@@ -92,6 +94,7 @@ const SEARCH_MIN_LENGTH = 2;
             });
 
             $(this.target).on('doSearch', function(e) {
+                console.log("doSearch: " + e);
                 self.doSearch(self);
             });
 

@@ -149,14 +149,17 @@ AjaxSolr.FancyTreeUpdatingWidget = AjaxSolr.AbstractWidget.extend(
 
                   maskTree(true);
                   var tree = $('#tree').fancytree('getTree');
-		  tree.options.filter.hide = true;
-		  tree.options.filter.leavesOnly = false;
-		  tree.filterNodes(function (node) {
+
+                tree.clearFilter();
+                tree.options.filter.hide = true;
+                  tree.options.filter.leavesOnly = false;
+                  tree.filterNodes(function (node) {
                       // console.log(node.key);
-                      // console.log(node.key +":" + resultHash[node.key]);
+                      if (typeof resultHash[node.key] !== 'undefined')
+                        console.log(node.key +":" + resultHash[node.key]);
                       return (typeof resultHash[node.key] !== 'undefined');
                   },false);
-//                  console.log("done traversing");
+                  console.log("done traversing");
                   maskTree(false);
                   // we are masking everything and unmasking here (for the time being).
                   maskSearchResults(false)
