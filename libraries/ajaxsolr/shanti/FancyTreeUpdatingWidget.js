@@ -153,6 +153,7 @@ AjaxSolr.FancyTreeUpdatingWidget = AjaxSolr.AbstractWidget.extend(
                 tree.clearFilter();
                 tree.options.filter.hide = true;
                   tree.options.filter.leavesOnly = false;
+                    tree.options.filter.scrollIntoView = false;
                   tree.filterNodes(function (node) {
                       // console.log(node.key);
                       if (typeof resultHash[node.key] !== 'undefined')
