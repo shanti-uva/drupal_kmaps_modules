@@ -27,7 +27,7 @@ const SEARCH_MIN_LENGTH = 2;
                     widget.notify.clear();
                 }
                 //  If the user inserts wildcards, assume they know what they are doing.
-                if (value.indexOf('*') < 0) {
+                //if (value.indexOf('*') < 0) {
 
                     // Process advanced search
 
@@ -36,42 +36,44 @@ const SEARCH_MIN_LENGTH = 2;
                     console.log("SEARCH SCOPE: " + $('#searchScopeGroup .checked input[name="scope"]').val());
 
 
+                    var query = "";
                     var anchor = $('#searchAnchorGroup .checked input[name="anchor"]').val();
                     var scope = $('#searchScopeGroup .checked input[name="scope"]').val();
 
-                    switch (anchor) {
-                        case 'startsWith':
-                            value = value + "*";
-                            break;
-                        case 'contains':
-                            value = "*" + value + "*";
-                            break;
-                        case 'exact':
-                            // fall through
-                            break;
-                        default:
-                            alert("Error: unknown anchor: '" + anchor + "'")
-                    }
+                   // if (/[\\u0000-\\u00ff]/.test(value)) {
+                        switch (anchor) {
+                            case 'startsWith':
+                                value = value + "*";
+                                break;
+                            case 'contains':
+                                value = "*" + value + "*";
+                                break;
+                            case 'exact':
+                                // fall through
+                                break;
+                            default:
+                                alert("Error: unknown anchor: '" + anchor + "'")
+                        }
+                    //}
 
                     switch (scope) {
                         case 'name':
 //                                    console.log("name scope");
-                            widget.manager.store.addByValue('df', 'name');
+                            query = "name: " + value + " OR name_zh: " + value;
                             break;
                         case 'all':
 //                                    console.log('all scope');
-                            widget.manager.store.addByValue('df', 'text');
+                            query = "text: " + value + " OR name_zh: " + value;
                             break;
                         default:
                             alert("Error: unknown scope: '" + scope + "'");
                     }
-                }
+                //}
 
                 // alert("search " + value);
-                        console.log("TEXTWIDGET: search " + value);
+                        console.log("TEXTWIDGET: query " + query);
 
-
-                widget.set(value);
+                widget.set(query);
                 if (value /* && self.set(value) */) {
 //                            console.log("TEXTWIDGET: do Request " + value);
                     widget.doRequest();
