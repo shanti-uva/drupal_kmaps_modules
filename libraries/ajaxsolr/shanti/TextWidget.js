@@ -59,11 +59,11 @@ const SEARCH_MIN_LENGTH = 2;
                     switch (scope) {
                         case 'name':
 //                                    console.log("name scope");
-                            query = "name: " + value + " OR name_zh: " + value;
+                            query = "name:" + value + " OR name_zh:" + value + " OR name_bod_tibt:" + value;
                             break;
                         case 'all':
 //                                    console.log('all scope');
-                            query = "text: " + value + " OR name_zh: " + value;
+                            query = "text:" + value + " OR name_zh:" + value+ " OR name_bod_tibt:" + value;
                             break;
                         default:
                             alert("Error: unknown scope: '" + scope + "'");
