@@ -113,7 +113,7 @@ AjaxSolr.FancyTreeUpdatingWidget = AjaxSolr.AbstractWidget.extend(
       // If this was simply a paging change then DON'T UPDATE
       // If this is a query change then UPDATE!
 
-      // see https://github.com/evolvingweb/ajax-solr/wiki/Tutorial%3A-Send-a-Solr-request-without-updating-widgets
+      // wsee https://github.com/evolvingweb/ajax-solr/wiki/Tutorial%3A-Send-a-Solr-request-without-updating-widgets
       // this is to prevent all the registered widgets from updating (And causing additional requests)
       if (searchChanged(self)) {
           self.tmpstore.remove("q");
@@ -156,8 +156,9 @@ AjaxSolr.FancyTreeUpdatingWidget = AjaxSolr.AbstractWidget.extend(
                     tree.options.filter.scrollIntoView = false;
                   tree.filterNodes(function (node) {
                       // console.log(node.key);
-                      if (typeof resultHash[node.key] !== 'undefined')
-                        console.log(node.key +":" + resultHash[node.key]);
+                      //if (typeof resultHash[node.key] !== 'undefined') {
+                      //    console.log(node.key + ":" + resultHash[node.key]);
+                      //}
                       return (typeof resultHash[node.key] !== 'undefined');
                   },false);
                   console.log("done traversing");
@@ -175,7 +176,7 @@ AjaxSolr.FancyTreeUpdatingWidget = AjaxSolr.AbstractWidget.extend(
               maskSearchResults(false)
           }
       } else {
-//          console.log("FancyTreeUpdatingWidget: no param change: doing nothing.")
+          console.log("FancyTreeUpdatingWidget: no param change: doing nothing.")
           maskTree(false);
           // we are masking everything and unmasking here (for the time being).
           maskSearchResults(false);
