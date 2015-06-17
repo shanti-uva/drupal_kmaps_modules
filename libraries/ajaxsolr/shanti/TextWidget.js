@@ -11,6 +11,8 @@ const SEARCH_MIN_LENGTH = 2;
 
             console.log("doSearch!");
 
+            $('.listview').tab('show');
+
             if (!widget) {
                 widget = this;
             }
