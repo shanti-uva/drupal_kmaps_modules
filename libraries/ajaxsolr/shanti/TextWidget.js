@@ -75,10 +75,14 @@ const SEARCH_MIN_LENGTH = 2;
 
                 widget.set(query);
                 if (value /* && self.set(value) */) {
-//                            console.log("TEXTWIDGET: do Request " + value);
+                            console.log("TEXTWIDGET: do Request " + value);
                     widget.doRequest();
                 }
             }
+
+
+			// switch to listview
+            $('.listview a').tab('show');
         },
 
 
