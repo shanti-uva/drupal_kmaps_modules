@@ -11,8 +11,6 @@ const SEARCH_MIN_LENGTH = 2;
 
             console.log("doSearch!");
 
-            $('.listview').tab('show');
-
             if (!widget) {
                 widget = this;
             }
@@ -77,10 +75,14 @@ const SEARCH_MIN_LENGTH = 2;
 
                 widget.set(query);
                 if (value /* && self.set(value) */) {
-//                            console.log("TEXTWIDGET: do Request " + value);
+                            console.log("TEXTWIDGET: do Request " + value);
                     widget.doRequest();
                 }
             }
+
+            //alert("showing");
+            // force into listview.
+            $('.listview a').tab('show');
         },
 
 
