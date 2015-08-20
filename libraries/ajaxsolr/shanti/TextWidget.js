@@ -80,8 +80,8 @@ const SEARCH_MIN_LENGTH = 2;
                 }
             }
 
-            //alert("showing");
-            // force into listview.
+
+			// switch to listview
             $('.listview a').tab('show');
         },
 
