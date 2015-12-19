@@ -13,7 +13,6 @@ function typeahead_libraries_info()
             'js' => array(
                 'typeahead.bundle.min.js',
             ),
-//          'css' => array('skin-' . $theme . '/ui.fancytree.css'),
         ),
     );
 
