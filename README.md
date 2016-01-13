@@ -1,9 +1,7 @@
 Drupal KMaps Modules
 ====================
 
-A module which contains submodules that are required by various KMaps Modules (e.g. drupal_kmaps_navigator).
-
-The following modules can be found here.
+The following modules that are required by various KMaps Modules (e.g. drupal_kmaps_navigator) can be found here.
 
 1. ajaxsolr: A totally rad library loader for [Ajax Solr](https://github.com/evolvingweb/ajax-solr).
 2. fancytree: A Drupal module that integrates the excellent Fancytree library.
