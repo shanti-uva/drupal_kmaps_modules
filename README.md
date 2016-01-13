@@ -8,4 +8,5 @@ The following modules that are required by various KMaps Modules (e.g. drupal_km
 3. typeahead: A Drupal module that makes Twitter's [typeahead.js](https://twitter.github.io/typeahead.js/)
 available as a library.
 
-When installing one of these modules, its corresponding library directory must be copied to sites/all/libraries.
+When installing one of these modules, its corresponding library directory (found in the libraries folder) 
+must be copied to sites/all/libraries.
