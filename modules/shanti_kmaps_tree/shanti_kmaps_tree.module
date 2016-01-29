@@ -1,0 +1,19 @@
+<?php
+function shanti_kmaps_tree_libraries_info()
+{
+    $libraries['shanti_kmaps_tree'] = array(
+        'name' => 'SHANTI KMaps Tree',
+        'download url' => 'https://github.com/shanti-uva/shanti_kmaps_tree',
+        'dependencies' => array('ajaxsolr', 'fancytree'),
+        'files' => array(
+            'js' => array(
+                'js/jquery.kmapstree.js',
+            ),
+            'css' => array(
+                'css/kmapstree.css',
+            ),
+        ),
+    );
+
+    return $libraries;
+}
