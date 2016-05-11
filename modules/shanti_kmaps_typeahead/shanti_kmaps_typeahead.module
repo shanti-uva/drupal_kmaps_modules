@@ -8,8 +8,8 @@ function shanti_kmaps_typeahead_libraries_info()
         'dependencies' => array('typeahead'),
         'files' => array(
             'js' => array(
-                'js/jquery.kmaps-typeahead.js',
-                'js/kmaps-util.js',
+                'js/jquery.kmaps-typeahead.js', // main kmaps typeahead code
+                'js/kmaps-util.js', // utility functions used by kmaps typeahead and kmaps tree
             ),
             'css' => array(
                 'css/kmaps-typeahead.css',
